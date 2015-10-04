@@ -1,0 +1,44 @@
+
+date open max min close volume (close-open) (max-max(open,close)) ((min
+
+A = date
+B = open
+C = max
+D = min
+E = close
+F = volume
+G = E-B
+H = C-max(B, E)
+I = min(B, E) - D
+J = C - D
+K = categ(B-E[i-1])
+L = categ(E-B)
+M = categ(E-E[i-1])
+N = categ(F-F[i-1])
+O = categ(B[i+1]-E)
+P = 'PV' if M opposite N else ''
+Q = DY/LY/DG/LG
+DY: D > C[i-1]
+LY: D > E[i-1]
+DG: C < D[i-1]
+LG: C < E[i-1]
+R = HH/LL/GS/BU
+HH C > C[i-1], D > D[i-1]
+LL C < C[i-1], D < D[i-1]
+GS C < C[i-1], D > D[i-1]
+BU C > C[i-1], D < D[i-1]
+S = E - C[i+1]
+T = E - D[i+1]
+U = E - C[i+2]
+V = E - D[i+2]
+W = B if S + T <= 0 && U + V <= 0
+    S if S + T >= 0 && U + V >= 0
+    V if S + T <= 0 && U + V >= 0
+    L if S + T >= 0 && U + V <= 0
+X = mov_avg(E, 5)
+Y = mov_avg(E, 10)
+Z = mov_avg(E, 125)
+AA = mov_avg(E, 250)
+
+categ: label based on distribution
+
