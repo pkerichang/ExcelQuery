@@ -31,7 +31,7 @@ public class Util {
         final double p1 = p.evaluate(60);
         final double n1 = p.evaluate(40);
         final double n2 = p.evaluate(20);
-        System.out.println(String.format("%f, %f, %f, %f", n2, n1, p1, p2));
+        // System.out.println(String.format("%f, %f, %f, %f", n2, n1, p1, p2));
         return arr.apply(new Op() {
             @Override
             public double apply(double val) {
