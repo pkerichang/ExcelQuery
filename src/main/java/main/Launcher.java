@@ -14,7 +14,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.*;
-import java.nio.file.Paths;
 import java.util.Properties;
 
 /**
