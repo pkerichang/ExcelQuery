@@ -13,6 +13,15 @@
         <name>Eric Chang</name>
     </organization>
 
+    <properties>
+        <poi.version>3.13</poi.version>
+        <javafx.version>2.2</javafx.version>
+        <apachemath.version>3.4.1</apachemath.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <jnlp.outfile>${project.build.finalName}.jnlp</jnlp.outfile>
+    </properties>
+    
     <build>
         <plugins>
             <plugin>
@@ -51,13 +60,6 @@
             </plugin>
         </plugins>
     </build>
-
-
-    <properties>
-        <poi.version>3.13</poi.version>
-        <javafx.version>2.2</javafx.version>
-        <apachemath.version>3.4.1</apachemath.version>
-    </properties>
 
     <dependencies>
         <dependency>
